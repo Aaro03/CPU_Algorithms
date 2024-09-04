@@ -223,7 +223,7 @@ void highestResponseRatioNext()
             present_processes.push_back(make_tuple(getProcessName(processes[j]), 1.0, 0));
             j++;
         }
-        // Calculate response ratio for every process
+        
         for (auto &proc : present_processes)
         {
             string process_name = get<0>(proc);
@@ -233,7 +233,6 @@ void highestResponseRatioNext()
             get<1>(proc) = calculate_response_ratio(wait_time, service_time);
         }
 
-        // Sort present processes by highest to lowest response ratio
         sort(all(present_processes), descendingly_by_response_ratio);
 
         if (!present_processes.empty())
@@ -478,7 +477,7 @@ void printTimeline(int algorithm_index)
         }
         cout << " \n";
     }
-    cout << "------------------------------------------------\n";
+    cout << "--------------------------------------------------\n";
 }
 
 void execute_algorithm(char algorithm_id, int quantum,string operation)

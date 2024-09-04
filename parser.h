@@ -16,9 +16,6 @@ vector<tuple<string,int,int>> processes;
 vector<vector<char>>timeline;
 unordered_map<string,int>processToIndex;
 
-
-//Results
-
 vector<int>finishTime;
 vector<int>turnAroundTime;
 vector<float>normTurn;
@@ -78,4 +75,4 @@ void parse()
 }
 
 
-#endif // PARSER_H_INCLUDED
+#endif 
